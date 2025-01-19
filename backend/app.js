@@ -45,7 +45,10 @@ router.post("/send/mail",async(req,res,next)=>{
   }
 })
 app.use(router)
-
+app.get("/",(req,res,next)=>{return res.status(200).json({
+  success:true,
+  message:"hello world"
+})})
 
 console.log(process.env.PORT)
 app.listen(process.env.PORT,()=>{
